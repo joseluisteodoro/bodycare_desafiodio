@@ -26,10 +26,19 @@ IMC = \frac{peso}{altura^2}
 
 ## 📂 Estrutura do Projeto
 
+    bin/
+        bodycare_desafiodio.dart
     lib/
-      imc.dart
+        models/
+            pessoa.dart
+            imc.dart
+            utilis/
+                terminal.dart
+      bodycare_desafiodio.dart
     test/
-      imc_test.dart
+      bodycare_desafiodio_test.dart
+    analysis_options.yaml  
+    pubspec.lock
     pubspec.yaml
     README.md
 
@@ -43,40 +52,15 @@ IMC = \frac{peso}{altura^2}
        dart pub get  
 
 3. Rodar o código  
-       dart run lib/imc.dart  
+       dart run
 
 ## 🧪 Rodando os Testes
 
 Este projeto utiliza o pacote [test](https://pub.dev/packages/test).  
 Para executar:  
-       dart test  
 
-Exemplo de teste em test/imc_test.dart:
+    dart test  
 
-    import 'package:test/test.dart';
-    import 'package:meu_app/imc.dart';
-
-    void main() {
-      test('Teste Cálculo de IMC com 1 casa decimal', () {
-        final resultado = IMC.calcularimc(70, 1.75);
-        expect(resultado, equals(22.9));
-      });
-    }
-
-## 📌 Exemplo de Uso
-
-    import 'package:meu_app/imc.dart';
-
-    void main() {
-      double peso = 70;
-      double altura = 1.75;
-      double imc = IMC.calcularimc(peso, altura);
-      print("Seu IMC é: $imc");
-    }
-
-Saída esperada:
-
-    Seu IMC é: 22.9
 
 ## 📊 Classificação do IMC
 
