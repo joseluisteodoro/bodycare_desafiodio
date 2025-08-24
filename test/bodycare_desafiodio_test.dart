@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('Teste Calculo de IMC', () {
-    final resultado = IMC.calcularimc(70, 175);
+    final double resultado = IMC.calcularimc(70, 1.75);
     expect(resultado, equals(22.9));
   });
 }
